@@ -1,3 +1,4 @@
+repository: johsuan/johsuan.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://johsuan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
