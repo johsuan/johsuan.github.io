@@ -16,9 +16,23 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      
-      - uses: helaili/jekyll-action@v2
+      - uses: ruby/setup-ruby@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          PAGES_REPO_NWO: ${{ github.repository }}
+          ruby-version: '3.1.5'
+
+      - name: Install Dependencies
+        run:
+          gem install bundler
+          bundle install --path vendor/bundle
+
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+
+      #- uses: helaili/jekyll-action@v2
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+           token: ${{ secrets.GITHUB_TOKEN }}
+           publish_dir: ./_site
