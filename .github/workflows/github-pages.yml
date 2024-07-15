@@ -21,7 +21,7 @@ jobs:
           ruby-version: '3.1.5'
 
       - name: Install Dependencies
-        run:
+        run: |
           gem install bundler
           bundle config  set --local path "vendor/bundle"
           bundle install
