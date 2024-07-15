@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run:
           gem install bundler
-          bundle install set --local path vendor/bundle
+          bundle config  set --local path "vendor/bundle"
           bundle install
 
 
