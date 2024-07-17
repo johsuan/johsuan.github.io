@@ -1,0 +1,26 @@
+---
+layout: default
+
+---
+<div class="container">
+    <div class="project-title-box">
+        <div class="row">
+            <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+                <h1 class="prokect-title">{{ project.title | escape }}</h1>
+            </div>
+        </div>
+    </div>
+    <h1 class="project-title">{{ project.title | escape }}</h1>
+
+    <div class="project_info">
+        <div class="project_author">
+        <span>By</span>
+        <a href="{{ site.baseurl }}/about/" class="author-name">{{site.data.settings.author.name}}</a>
+    </div>
+    
+    <div class="project_content">
+        {{content}}
+    </div>
+
+
+</div>

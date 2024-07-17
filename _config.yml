@@ -25,7 +25,15 @@ defaults:
 include:
   - _pages
 
-
+# Projects Path
+defaults:
+  - scope:
+      path: '_projects'
+    values:
+      permalink: /projects/:path/
+      
+include:
+  - _projects
 # Tags
 tag_page_dir:         tag
 tag_page_layout:      tag_page

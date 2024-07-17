@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About
-permalink: /about/
-image: 01.jpg
+permalink: /about/ # permanent link
+image: 11.jpg
 ---
 
 Hi, my name is Johsuan. Enthusiastic and curious about data science and software development.

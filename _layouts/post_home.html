@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="posthome-title-box ">
+        <div class="row">
+            <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+                <h1 class="post-title">{{ page.title | escape }}</h1>
+            </div>
+        </div>
+    </div>
+
+    {% if post.image %}
+    <div class="page__head">
+        <div class="page-image" style="background-image: url({{site.baseurl}}/images/{{post.image}})"></div>
+    </div>
+    {% endif %}
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+            <div class="post_home__content">
+                {{ content }}
+            </div>
+            <div class="posts-list">
+                {% for post in site.posts %}
+                <div class="post-item post-home">
+                <!-- 使用 prepend 過濾器來生成文章鏈接 -->
+                <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+                <!-- 顯示文章摘要 -->
+                <p class="post-excerpt">{{ post.excerpt }}</p>
+                <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include pagination.html %}
