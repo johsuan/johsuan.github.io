@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: project_home
 title: Projects
 permalink: /projects/
 image: 08.jpg
