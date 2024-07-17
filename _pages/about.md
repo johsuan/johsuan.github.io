@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+date: 2024-07-17 17:05:55 +0800
 permalink: /about/ # permanent link
 image: 11.jpg
 ---
